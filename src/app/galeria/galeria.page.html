@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Galeria</ion-title>
+    <ion-button href="/home" color="primary">Voltar</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides>
+    <ion-slide *ngFor="let galeria of fotos">
+      <ion-card>
+        <img src="{{galeria.imagem}}" alt="">
+        <ion-card-content>{{galeria.descricao}}</ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>
