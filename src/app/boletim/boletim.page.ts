@@ -5,36 +5,65 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './boletim.page.html',
   styleUrls: ['./boletim.page.scss'],
 })
-export class BoletimPage implements OnInit {
-  boletim;
+export class BoletimPage {
+  boletins: { disciplina: string, nota: number }[];
   media;
-  constructor() { }
-
-  ngOnInit() {
-    this.boletim = [
+  boletim;
+  constructor() {
+    this.boletins = [
       {
-        "disciplina": "DDM",
-        "nota": 10,
+        disciplina: "DDM",
+        nota: 10,
       },
 
       {
-        "disciplina": "IHC",
-        "nota": 10,
+        disciplina: "IHC",
+        nota: 10,
       },
 
       {
-        "disciplina": "EMP",
-        "nota": 9.5,
+        disciplina: "EMP",
+        nota: 10,
       },
 
       {
-        "disciplina": "ES",
-        "nota": 9.5,
+        disciplina: "ES",
+        nota: 10,
+      },
+
+      {
+        disciplina: "PAW",
+        nota: 10,
+      },
+
+      {
+        disciplina: "BD",
+        nota: 10,
+      },
+
+      {
+        disciplina: "AL",
+        nota: 10,
       },
     ];
-    this.media = {
-      "total": 9.5,
+
+    let soma = 0;
+    for (let i of this.boletins) {
+      soma = soma + i.nota;
     }
+    // media = soma_todas_as_notas / qtd_notas
+    this.media = {
+      "total": soma / this.boletins.length,
+    }
+  }
+  async excluir(boletim) {
+    var i = this.boletins.indexOf(boletim);
+    this.boletins.splice(i, 1);
+
+  }
+
+  ngOnInit() {
+
   }
 
 }

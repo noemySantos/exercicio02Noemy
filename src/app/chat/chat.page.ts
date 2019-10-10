@@ -6,26 +6,38 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chat.page.scss'],
 })
 export class ChatPage{
-  conversas;
+  conversas: {img: string, contato: string, ultimaMsg: string}[];
   constructor() {
 
     this.conversas = [
       {
-        "img": "https://pbs.twimg.com/media/CFgNPQhUgAA4SZb.jpg",
-        "contato": "Maria",
-        "ultimaMsg": "Oi fake... ",
+        img: "https://pbs.twimg.com/media/CFgNPQhUgAA4SZb.jpg",
+        contato: "Gessica",
+        ultimaMsg: "Oi fake... ",
       },
 
       {
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDlm1fA6B3WGWqiisD8Irb1PGajbFIuvOX1XOruCg9QV7YFZ2m",
-        "contato": "Pedro",
-        "ultimaMsg": "Oi tudo bem?",
+        img: "https://gartic.com.br/imgs/mural/jo/john_mustang/dog-p-menina25.png",
+        contato: "Lorenzo",
+        ultimaMsg: "OI...",
       },
 
       {
-        "img": "https://i.pinimg.com/originals/9b/20/01/9b20011e8a3755e3e13a22971efbe206.jpg",
-        "contato": "Cleide",
-        "ultimaMsg": "Neiva do ceu...",
+        img: "https://s3.amazonaws.com/assets.gocanvas.io/blog/_openGraph/Bitmoji-Share-Card.png?mtime=20180723231530",
+        contato: "Cleide",
+        ultimaMsg: "Neiva do ceu...",
+      },
+
+      {
+        img: "https://i.pinimg.com/236x/79/40/f2/7940f2e6150caea2b94f4354a7d55a6b.jpg",
+        contato: "Dr. claudia",
+        ultimaMsg: "Marcado pra amanhã...",
+      },
+
+      {
+        img: "https://i.pinimg.com/236x/04/35/94/0435945856d08cf5f205c3619f473a19--apps-branding.jpg",
+        contato: "mãe",
+        ultimaMsg: "Vai dar tudo certo...",
       },
     ];
   }

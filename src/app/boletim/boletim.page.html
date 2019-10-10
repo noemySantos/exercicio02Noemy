@@ -11,14 +11,15 @@
       <ion-label>Notas</ion-label>
     </ion-list-header>
 
-    <ion-item *ngFor="let registro of boletim">
+    <ion-item *ngFor="let registro of boletins">
       <ion-label>{{registro.disciplina}}</ion-label>
       <ion-label slot="end">{{registro.nota}}</ion-label>
+      <ion-icon name="trash" (click)="excluir(registro)" slot="end"></ion-icon>
     </ion-item>
 
     <ion-item>
-      <ion-label>MEDIA </ion-label>
-      <ion-label slot="end">{{media.total}}</ion-label>
+      <ion-label>MEDIA</ion-label>
+      <ion-label>{{media.total}}</ion-label>
     </ion-item>
 
   </ion-list>
